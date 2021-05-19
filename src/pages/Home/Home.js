@@ -94,16 +94,18 @@ const Home = () => {
                             </h2>
                         </div>
 
-                        <div className="image-container">
-                            <figure>
-                                <img src={profilePng} alt="Ryan Basque profile" />
-                            </figure>
-                        </div>
-
-                        <div className="ellipse">
-                            <div>
-                                <Icon icon={arrowDown} style={{ color: '#3a3a3a', fontSize: '20px' }} />
+                        <article>
+                            <div className="image-container">
+                                <figure>
+                                    <img src={profilePng} alt="Ryan Basque profile" />
+                                </figure>
                             </div>
+                        </article>
+                    </div>
+
+                    <div className="ellipse">
+                        <div>
+                            <Icon icon={arrowDown} style={{ color: '#3a3a3a', fontSize: '20px' }} />
                         </div>
                     </div>
                 </section>

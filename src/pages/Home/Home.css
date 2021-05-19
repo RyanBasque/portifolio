@@ -1,6 +1,19 @@
 .home-main section .first-container {
   padding: 0 25px;
-  height: 90vh;
+}
+
+@media (min-width: 1000px) {
+  .home-main section .first-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1000px) {
+  .home-main section .first-container .text-container {
+    margin-right: 10px;
+  }
 }
 
 .home-main section .first-container .text-container h1, .home-main section .first-container .text-container h2 {
@@ -12,6 +25,14 @@
   color: #3A3A3A;
 }
 
+@media (min-width: 768px) {
+  .home-main section .first-container .text-container h1, .home-main section .first-container .text-container h2 {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
 .home-main section .first-container .text-container h1 span, .home-main section .first-container .text-container h2 span {
   font-weight: bold;
   color: #C4674D;
@@ -19,8 +40,16 @@
 
 .home-main section .first-container .text-container h2 {
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .home-main section .first-container .text-container h2 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .home-main section .first-container .image-container {
@@ -33,7 +62,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 .home-main section .first-container .image-container img {
@@ -41,7 +70,21 @@
   height: 146px;
 }
 
-.home-main section .first-container .ellipse {
+@media (min-width: 500px) {
+  .home-main section .first-container .image-container img {
+    width: 246px;
+    height: 246px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-main section .first-container .image-container img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.home-main section .ellipse {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,9 +94,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 25px;
 }
 
-.home-main section .first-container .ellipse div {
+.home-main section .ellipse div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

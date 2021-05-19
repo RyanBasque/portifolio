@@ -5,9 +5,16 @@
         .first-container {
             padding: 0 25px;
 
-            height: 90vh;
+            @media (min-width: 1000px) {
+                display: flex;
+            }
 
             .text-container {
+
+                @media (min-width: 1000px) {
+                    margin-right: 10px;
+                }
+
                 h1, h2 {
                     font-family: Lato;
                     font-style: italic;
@@ -16,6 +23,12 @@
                     line-height: 22px;
             
                     color: #3A3A3A;
+
+                    @media (min-width: 768px) {
+                        font-weight: 300;
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
             
                     span {
                         font-weight: bold;
@@ -26,9 +39,15 @@
             
                 h2 {
                     margin-top: 20px;
-                    margin-bottom: 30px;
+                    margin-bottom: 40px;
     
                     font-size: 14px;
+
+                    @media (min-width: 768px) {
+                        font-weight: 300;
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
                 }
             }
         
@@ -37,33 +56,44 @@
                 justify-content: center;
                 align-items: center;
         
-                margin-bottom: 35px;
-        
+                margin-bottom: 50px;
+
                 img {
                     width: 146px;
                     height: 146px;
+            
+                    @media (min-width: 500px) {
+                        width: 246px;
+                        height: 246px;
+                    }
+
+                    @media (min-width: 768px) {
+                        width: 300px;
+                        height: 300px;
+                    }
                 }
             }
-        
-            .ellipse {
+    
+        }
+
+        .ellipse {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            margin-bottom: 25px;
+    
+            div {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-        
-                // margin-bottom: 25px;
-        
-                div {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-        
-                    width: 39px;
-                    height: 39px;
-        
-                    border-radius: 100%;
-        
-                    background-color: #DDDDDD;
-                }
+    
+                width: 39px;
+                height: 39px;
+    
+                border-radius: 100%;
+    
+                background-color: #DDDDDD;
             }
         }
 
