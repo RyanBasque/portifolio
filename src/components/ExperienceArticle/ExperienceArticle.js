@@ -8,7 +8,7 @@ const ExperienceArticle = ({ label, date, text, dot, id }) => {
     const animationClass = 'animate';
 
     const animeScroll = () => {
-        const windowTop = window.pageYOffset + ((window.innerHeight * 3.7) / 4);
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3.68) / 4);
 
         target.forEach((element) => {
             (windowTop) > element.offsetTop ? 
