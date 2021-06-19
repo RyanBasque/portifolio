@@ -46,6 +46,7 @@ article .fake-article p {
   letter-spacing: 0.015em;
   color: #FFFFFF;
   margin-bottom: 15px;
+  max-width: 1500px;
 }
 
 article .article-div {
@@ -53,5 +54,22 @@ article .article-div {
   height: 10px;
   background-color: #FFFFFF;
   border-radius: 100%;
+}
+
+[data-anime] {
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+[data-anime="left"] {
+  -webkit-transform: translate3d(-50px, 0, 0);
+          transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
 }
 /*# sourceMappingURL=ExperienceArticle.css.map */
