@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 import ExperienceArticle from '../../components/ExperienceArticle/ExperienceArticle';
 // import Footer from '../../components/Footer/Footer';
@@ -11,8 +11,7 @@ import arrowDown from '@iconify/icons-bi/arrow-down';
 import profilePng from '../../assets/images/profile-pic.png';
 
 const Home = () => {
-    document.title = 'Ryan Basque - Home';
-
+    const [atualAge, setAtualAge] = useState(18);
     const [articleInfo] = useState([
         {
             label: "Lógica de programação",
@@ -86,10 +85,18 @@ const Home = () => {
         },
     ]);
 
+    useEffect(() => {
+        const date = new Date();
+        let age = date.getFullYear() - 2002;
+        setAtualAge(date.getMonth() > 11 ? age : age - 1);
+    }, []);
+
     const scrollToContainer = () => {
         const height = document.querySelector('#scrollRef').offsetHeight;
         window.scrollTo(0, height + 100);
     };
+
+    document.title = 'Ryan Basque - Home';
 
     return (
         <Fragment>
@@ -105,7 +112,7 @@ const Home = () => {
 
                             <div className="h2-container">
                                 <h2>Programador Front-end, entusiasta à área de UX/UI, curioso e determinado. </h2>
-                                <h2>Estudo programação web desde os 16 anos, atualmente, tenho 18, com conhecimentos avançados em <span>React, React Native, Angular, HTML, CSS, JavaScript, Typescript, Figma, Git, GitHub, Bitbucket, NPM e Yarn.</span></h2>
+                                <h2>Estudo programação web desde os 16 anos, atualmente, tenho {atualAge}, com conhecimentos avançados em <span>React, React Native, Angular, HTML, CSS, JavaScript, Typescript, Figma, Git, GitHub, Bitbucket, NPM e Yarn.</span></h2>
                                 <h2>Também estudo <span>Python, Java, SQL, IA - NodeRed, Agile Software Design e UX/UI.</span></h2>
                             </div>
                         </div>
@@ -146,6 +153,15 @@ const Home = () => {
                                 ))
                             }
                         </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="third-container">
+                        <span>
+                            <div></div>
+                            <h1>&lt; Projetos /&gt;</h1>
+                        </span>
                     </div>
                 </section>
             </main>

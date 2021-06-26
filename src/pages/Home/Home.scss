@@ -116,7 +116,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-    
+
                 width: 39px;
                 height: 39px;
     
@@ -126,6 +126,11 @@
 
                 cursor: pointer;
 
+                transition: .3s;
+
+                &:hover {
+                    transform: scaleY(1.2) scaleX(1.2);
+                }
             }
         }
 
@@ -167,6 +172,38 @@
 
                 @media (min-width: 1000px) {
                     padding: 0 30px;
+                }
+            }
+        }
+
+        .third-container {
+            padding: 10px 20px;
+
+            span {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div {
+                    width: 75%;
+                    height: 2px;
+
+                    background-color: #C4674D;
+                }
+
+                h1 {
+                    font-family: Lato;
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    color: #C4674D;
+
+                    @media (min-width: 768px) {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
                 }
             }
         }

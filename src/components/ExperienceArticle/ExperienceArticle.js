@@ -4,22 +4,15 @@ import './ExperienceArticle.css';
 
 const ExperienceArticle = ({ label, date, text, dot, id }) => {
 
-    const target = document.querySelectorAll('[data-anime]');
-    const animationClass = 'animate';
+    const showArticle = (articleId) => {
+        const div = document.getElementById(articleId);
+        const divHeight = div.getBoundingClientRect().top;
 
-    const animeScroll = () => {
-        const windowTop = window.pageYOffset + ((window.innerHeight * 3.68) / 4);
+        divHeight < 600 ? div.classList.add('animate') : div.classList.remove('animate');
+    };
 
-        target.forEach((element) => {
-            (windowTop) > element.offsetTop ? 
-                element.classList.add(animationClass) : 
-                element.classList.remove(animationClass);
-        });
-
-    }
-
-    window.addEventListener('scroll', () => {
-        animeScroll();
+    document.addEventListener('scroll', () => {
+        showArticle(id)
     });
 
     return (
@@ -30,7 +23,7 @@ const ExperienceArticle = ({ label, date, text, dot, id }) => {
 
                 <p>{text}</p>
             </div>
-            { dot && <div className="article-div" />}
+            {dot && <div className="article-div" />}
         </article>
     );
 };

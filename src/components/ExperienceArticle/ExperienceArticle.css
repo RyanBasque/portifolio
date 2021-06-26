@@ -57,9 +57,9 @@ article .article-div {
 }
 
 [data-anime] {
-  opacity: 0;
   -webkit-transition: .3s;
   transition: .3s;
+  opacity: 0;
 }
 
 [data-anime="left"] {
