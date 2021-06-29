@@ -1,6 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
 import ExperienceArticle from '../../components/ExperienceArticle/ExperienceArticle';
+import ProjectArticle from '../../components/ProjectArticle/ProjectArticle';
+import ProjectSuggestion from '../../components/ProjectSuggestion/ProjectSuggestion';
 // import Footer from '../../components/Footer/Footer';
 
 import './Home.css';
@@ -84,6 +86,16 @@ const Home = () => {
             id: 9,
         },
     ]);
+    const [projectInfo] = useState([
+        { imagePath: 0, title: 'Plus Motos', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+        { imagePath: 1, title: 'Hello - FAQ', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+        { imagePath: 0, title: 'CSS Changer', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+        { imagePath: 1, title: 'Accademy', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+        { imagePath: 0, title: 'Login Animado', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+        { imagePath: 1, title: 'Timer', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+        { imagePath: 0, title: 'Testes de animação', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+        { imagePath: 1, title: 'Gestão de festas', date: 'Fevereiro de 2020', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam optio neque voluptas, veritatis quaerat corrupti exercitationem tenetur earum voluptate magnam vel temporibus, inventore dolor minus ratione quia ducimus error! Mollitia.' },
+    ])
 
     useEffect(() => {
         const date = new Date();
@@ -162,6 +174,23 @@ const Home = () => {
                             <div></div>
                             <h1>&lt; Projetos /&gt;</h1>
                         </span>
+                        <div className="projects-container">
+                            {
+                                projectInfo.map(({ imagePath, title, date, description }, index) => {
+                                    return (
+                                        <ProjectArticle
+                                            imagePath={imagePath}
+                                            title={title}
+                                            date={date}
+                                            description={description}
+                                            key={index}
+                                        />
+                                    );
+                                })
+                            }
+
+                            <ProjectSuggestion />
+                        </div>
                     </div>
                 </section>
             </main>

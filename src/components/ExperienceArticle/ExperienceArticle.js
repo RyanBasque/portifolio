@@ -8,7 +8,7 @@ const ExperienceArticle = ({ label, date, text, dot, id }) => {
         const div = document.getElementById(articleId);
         const divHeight = div.getBoundingClientRect().top;
 
-        divHeight < 600 ? div.classList.add('animate') : div.classList.remove('animate');
+        divHeight < 700 ? div.classList.add('animate') : div.classList.remove('animate');
     };
 
     document.addEventListener('scroll', () => {

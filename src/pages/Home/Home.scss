@@ -169,15 +169,21 @@
             .article-container {
                 margin-top: 30px;
                 padding: 0 20px;
+                padding-bottom: 20px;
 
                 @media (min-width: 1000px) {
-                    padding: 0 30px;
+                    padding: 0 30px 20px 30px;
                 }
             }
         }
 
         .third-container {
-            padding: 10px 20px;
+            margin-top: 30px;
+            padding: 0 24px;
+
+            @media (min-width: 1000px) {
+                padding: 0 34px 20px 34px;
+            }
 
             span {
                 display: flex;
@@ -185,10 +191,13 @@
                 align-items: center;
 
                 div {
-                    width: 75%;
+                    flex: 1;
+
                     height: 2px;
 
                     background-color: #C4674D;
+
+                    margin-right: 10px;
                 }
 
                 h1 {
@@ -204,6 +213,16 @@
                         font-size: 25px;
                         line-height: 30px;
                     }
+                }
+            }
+
+            .projects-container {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                @media (min-width: 600px) {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
                 }
             }
         }

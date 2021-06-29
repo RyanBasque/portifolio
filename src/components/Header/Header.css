@@ -9,9 +9,42 @@
   font-size: 20px;
   line-height: 24px;
   color: #3A3A3A;
+  margin-left: 5px;
 }
 
 .header .header-div span strong {
   font-weight: 800;
+}
+
+@-webkit-keyframes header-logo {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 0.3;
+    stroke-dasharray: 100 0;
+    fill: transparent;
+  }
+  60%, 100% {
+    stroke-width: 0;
+  }
+}
+
+@keyframes header-logo {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 0.3;
+    stroke-dasharray: 100 0;
+    fill: transparent;
+  }
+  60%, 100% {
+    stroke-width: 0;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

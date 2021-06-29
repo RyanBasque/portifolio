@@ -198,16 +198,24 @@
 .home-main section .second-container .article-container {
   margin-top: 30px;
   padding: 0 20px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 1000px) {
   .home-main section .second-container .article-container {
-    padding: 0 30px;
+    padding: 0 30px 20px 30px;
   }
 }
 
 .home-main section .third-container {
-  padding: 10px 20px;
+  margin-top: 30px;
+  padding: 0 24px;
+}
+
+@media (min-width: 1000px) {
+  .home-main section .third-container {
+    padding: 0 34px 20px 34px;
+  }
 }
 
 .home-main section .third-container span {
@@ -223,9 +231,12 @@
 }
 
 .home-main section .third-container span div {
-  width: 75%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 2px;
   background-color: #C4674D;
+  margin-right: 10px;
 }
 
 .home-main section .third-container span h1 {
@@ -241,6 +252,21 @@
   .home-main section .third-container span h1 {
     font-size: 25px;
     line-height: 30px;
+  }
+}
+
+.home-main section .third-container .projects-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .home-main section .third-container .projects-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 40px;
   }
 }
 /*# sourceMappingURL=Home.css.map */
