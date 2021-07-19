@@ -101,6 +101,14 @@ const Home = () => {
         const date = new Date();
         let age = date.getFullYear() - 2002;
         setAtualAge(date.getMonth() > 11 ? age : age - 1);
+
+        // const url = 'https://the-one-api.dev/v2/movie';
+
+        // fetch(url).then(data => data.json())
+        // .then( data => {
+        //     console.log(data);
+        // });
+
     }, []);
 
     const scrollToContainer = () => {

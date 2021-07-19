@@ -7,8 +7,9 @@ const ExperienceArticle = ({ label, date, text, dot, id }) => {
     const showArticle = (articleId) => {
         const div = document.getElementById(articleId);
         const divHeight = div.getBoundingClientRect().top;
+        const screenHeight = window.screen.height;
 
-        divHeight < 700 ? div.classList.add('animate') : div.classList.remove('animate');
+        divHeight < (screenHeight / 1.3) ? div.classList.add('animate') : div.classList.remove('animate');
     };
 
     document.addEventListener('scroll', () => {
