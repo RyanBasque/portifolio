@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b4be63c0.chunk.css",
+    "main.js": "/static/js/main.fd412dd2.chunk.js",
+    "main.js.map": "/static/js/main.fd412dd2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9d0856f9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9d0856f9.js.map",
+    "static/js/2.0a1ef5b1.chunk.js": "/static/js/2.0a1ef5b1.chunk.js",
+    "static/js/2.0a1ef5b1.chunk.js.map": "/static/js/2.0a1ef5b1.chunk.js.map",
+    "static/js/3.83fb7024.chunk.js": "/static/js/3.83fb7024.chunk.js",
+    "static/js/3.83fb7024.chunk.js.map": "/static/js/3.83fb7024.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b4be63c0.chunk.css.map": "/static/css/main.b4be63c0.chunk.css.map",
+    "static/js/2.0a1ef5b1.chunk.js.LICENSE.txt": "/static/js/2.0a1ef5b1.chunk.js.LICENSE.txt",
+    "static/media/hello-FAQ.d5591045.svg": "/static/media/hello-FAQ.d5591045.svg",
+    "static/media/plus-motos.e7eef3f0.svg": "/static/media/plus-motos.e7eef3f0.svg",
+    "static/media/profile-pic.742e38e0.png": "/static/media/profile-pic.742e38e0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d0856f9.js",
+    "static/js/2.0a1ef5b1.chunk.js",
+    "static/css/main.b4be63c0.chunk.css",
+    "static/js/main.fd412dd2.chunk.js"
+  ]
+}
